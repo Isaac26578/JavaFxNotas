@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="627.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.notas.controlador.InicioControlador">
+   <children>
+      <TextField fx:id="txtTitulo" layoutX="111.0" layoutY="20.0" prefHeight="25.0" prefWidth="160.0" />
+      <Label layoutX="14.0" layoutY="24.0" text="TITULO" textFill="#d91a1a">
+         <font>
+            <Font name="Arial Bold Italic" size="12.0" />
+         </font></Label>
+      <Label layoutX="14.0" layoutY="75.0" text="CATEGORIA" textFill="#b31313">
+         <font>
+            <Font name="Arial Bold Italic" size="12.0" />
+         </font></Label>
+      <Label layoutX="17.0" layoutY="127.0" text="NOTA" textFill="#f21919">
+         <font>
+            <Font name="Arial Bold Italic" size="12.0" />
+         </font></Label>
+      <TextArea fx:id="txtNota" layoutX="114.0" layoutY="127.0" prefHeight="86.0" prefWidth="160.0" />
+      <DatePicker layoutX="114.0" layoutY="239.0" prefHeight="42.0" prefWidth="160.0" />
+      <Label layoutX="9.0" layoutY="239.0" text="RECORDATORIO" textFill="#341880">
+         <font>
+            <Font name="Arial Bold Italic" size="12.0" />
+         </font></Label>
+      <Button fx:id="btnCrearNota" layoutX="146.0" layoutY="303.0" mnemonicParsing="false" onAction="#crearNota" text="CREAR NOTA">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.6899999976158142" green="0.0414000004529953" blue="0.49694210290908813" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.5614035129547119" green="0.20965994894504547" blue="0.4617428481578827" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font name="Arial Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="txtCategoria" layoutX="114.0" layoutY="71.0" prefHeight="25.0" prefWidth="160.0" />
+      <TableView fx:id="tablaNotas" layoutX="306.0" layoutY="20.0" prefHeight="258.0" prefWidth="310.0">
+        <columns>
+           <TableColumn fx:id="colTitulo" prefWidth="97.0" text="Título" />
+           <TableColumn fx:id="colCategoria" prefWidth="80.99996948242188" text="Categoría" />
+           <TableColumn fx:id="colTexto" prefWidth="95.99998474121094" text="Nota" />
+           <TableColumn fx:id="colFecha" prefWidth="121.33334350585938" text="Fecha creación" />
+        </columns>
+      </TableView>
+
+   </children>
+</AnchorPane>
